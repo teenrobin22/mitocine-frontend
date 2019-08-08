@@ -49,7 +49,7 @@ export class NuevoComponent implements OnInit {
     usuario.enabled = true;
     usuario.cliente = cliente;
 
-    this.usuarioService.registrar(usuario).subscribe(() => {
+    this.usuarioService.registrarUsuario(usuario).subscribe(() => {
       this.matSnackBar.open('Se creó usuario', 'INFO', {
         duration: 2000
       });

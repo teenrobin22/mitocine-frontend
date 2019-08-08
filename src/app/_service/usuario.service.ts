@@ -15,9 +15,9 @@ export class UsuarioService {
   url: string = `${environment.HOST}/usuarios`;
   constructor(private http: HttpClient) { }
 
- /* registrar(usuario: Usuario) {
+  registrarUsuario(usuario: Usuario) {
     return this.http.post(this.url, usuario);
-  }*/
+  }
 
   registrar(usuario: Usuario, file?: File) {
     let formdata: FormData = new FormData();

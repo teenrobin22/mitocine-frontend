@@ -34,7 +34,7 @@ const routes: Routes = [
   { path: 'not-403', component: Not403Component },
   { path: 'nuevo-usuario', component: NuevoComponent },
   { path: 'cliente', component: ClienteComponent , canActivate: [GuardService]},
-  { path: 'perfil', component: PerfilComponent, canActivate: [GuardService] },
+  { path: 'perfil', component: PerfilComponent },
 
   { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
