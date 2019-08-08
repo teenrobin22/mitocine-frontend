@@ -1,0 +1,37 @@
+<mat-form-field>
+    <input matInput placeholder="Nombres" [(ngModel)]="usuario.cliente.nombres">
+</mat-form-field>
+
+<mat-form-field>
+    <input matInput placeholder="Apellidos" [(ngModel)]="usuario.cliente.apellidos">
+</mat-form-field>
+
+<!-- <mat-form-field>
+    <input matInput placeholder="Fecha de Nacimiento" [(ngModel)]="cliente.fechaNac">
+</mat-form-field> -->
+
+<mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento" [(ngModel)]="usuario.cliente.fechaNac">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field>
+    <input matInput placeholder="DNI" [(ngModel)]="usuario.cliente.dni">
+</mat-form-field>
+
+<mat-form-field>
+    <input matInput placeholder="Usuario" [(ngModel)]="usuario.username">
+</mat-form-field>
+
+<mat-form-field>
+    <input type="password" matInput placeholder="Password" [(ngModel)]="usuario.password">
+</mat-form-field>
+
+<button mat-button color="primary" onclick="document.getElementById('fileToUpload').click()">Seleccionar archivo</button>
+<input id="fileToUpload" type="file" (change)="selectFile($event)" style="display:none;">
+<img mat-card-image [src]="imagenData" *ngIf="imagenEstado" width="50%" height="50%" />
+<p>{{labelFile}}</p>
+
+<button mat-raised-button color="primary" (click)="operar()">Aceptar</button>
+<button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>
